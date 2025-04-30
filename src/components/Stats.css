@@ -1,0 +1,51 @@
+.stats-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.stats-header {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stats-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stats-title span:first-child {
+  color: #6b7280;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stats-title span:last-child {
+  color: #111827;
+  font-size: 1.125rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.stat-item p {
+  color: #6b7280;
+  font-size: 0.875rem;
+} 
