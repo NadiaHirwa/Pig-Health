@@ -43,9 +43,15 @@ const Navbar = () => {
             </a>
             {activeDropdown === 'about' && (
               <div className="dropdown-menu">
-                <a href="#">Our Mission</a>
-                <a href="#">Team</a>
-                <a href="#">Partners</a>
+                <div className="dropdown-section">
+                  <h3>Pig Breeds</h3>
+                  <a href="#">Large White</a>
+                  <a href="#">Landrace</a>
+                  <a href="#">Duroc</a>
+                  <a href="#">Pietrain</a>
+                  <a href="#">Berkshire</a>
+                  <a href="#">Camborough</a>
+                </div>
               </div>
             )}
           </div>
@@ -99,10 +105,15 @@ const Navbar = () => {
             </a>
             {activeDropdown === 'shop' && (
               <div className="dropdown-menu">
-                <a href="#">Medicines</a>
-                <a href="#">Equipment</a>
-                <a href="#">Feed</a>
-                <a href="#">Supplements</a>
+                <div className="dropdown-section">
+                  <h3>Pig Breeds</h3>
+                  <a href="#">Large White</a>
+                  <a href="#">Landrace</a>
+                  <a href="#">Duroc</a>
+                  <a href="#">Pietrain</a>
+                  <a href="#">Berkshire</a>
+                  <a href="#">Camborough</a>
+                </div>
               </div>
             )}
           </div>
@@ -117,10 +128,15 @@ const Navbar = () => {
             </a>
             {activeDropdown === 'community' && (
               <div className="dropdown-menu">
-                <a href="#">Forums</a>
-                <a href="#">Training</a>
-                <a href="#">Events</a>
-                <a href="#">Resources</a>
+                <div className="dropdown-section">
+                  <h3>Pig Breeds</h3>
+                  <a href="#">Large White</a>
+                  <a href="#">Landrace</a>
+                  <a href="#">Duroc</a>
+                  <a href="#">Pietrain</a>
+                  <a href="#">Berkshire</a>
+                  <a href="#">Camborough</a>
+                </div>
               </div>
             )}
           </div>
