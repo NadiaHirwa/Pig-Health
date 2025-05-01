@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-brand">
           <div className="footer-logo">
             <h2>PigHealth</h2>
-            <span>Rewards</span>
+            <span>Rwanda</span>
           </div>
           <p className="footer-description">
             There are many variations of passages of lorem ipsum available, but the 

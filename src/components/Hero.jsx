@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import heroPig from '../assets/hero-pig.jpg';
+import heroPig1 from '../assets/hero-pig1.jpg';
+import heroPig2 from '../assets/hero-pig2.jpg';
 import './Hero.css';
 
 const Hero = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const images = [heroPig, heroPig1, heroPig2];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="hero">
+    <div 
+      className="hero"
+      style={{
+        background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url(${images[currentImage]})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        transition: 'background-image 0.5s ease-in-out'
+      }}
+    >
       <div className="hero-content">
         <div className="hero-text">
           <h1>Transforming Pig Farming with Innovation</h1>
