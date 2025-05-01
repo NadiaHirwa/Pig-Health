@@ -120,14 +120,11 @@ const Navbar = () => {
             )}
           </div>
 
-          
-
           <a href="#" className="nav-link">Government policies</a>
         </div>
 
         <div className="user-section">
-          <FaUser className="user-icon" />
-          <span>User</span>
+          <a href="/signup" className="nav-link">Sign In/Sign Up</a>
         </div>
       </div>
     </nav>
