@@ -33,28 +33,7 @@ const Navbar = () => {
         <div className="nav-menu">
           <a href="/" className="nav-link active">Home</a>
           
-          <div 
-            className="nav-item" 
-            onMouseEnter={() => handleMouseEnter('about')}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a href="#" className="nav-link">
-              About <span className="arrow">▾</span>
-            </a>
-            {activeDropdown === 'about' && (
-              <div className="dropdown-menu">
-                <div className="dropdown-section">
-                  <h3>Pig Breeds</h3>
-                  <a href="#">Large White</a>
-                  <a href="#">Landrace</a>
-                  <a href="#">Duroc</a>
-                  <a href="#">Pietrain</a>
-                  <a href="#">Berkshire</a>
-                  <a href="#">Camborough</a>
-                </div>
-              </div>
-            )}
-          </div>
+          
 
           <div 
             className="nav-item" 
@@ -106,13 +85,13 @@ const Navbar = () => {
             {activeDropdown === 'shop' && (
               <div className="dropdown-menu">
                 <div className="dropdown-section">
-                  <h3>Pig Breeds</h3>
-                  <a href="#">Large White</a>
-                  <a href="#">Landrace</a>
-                  <a href="#">Duroc</a>
-                  <a href="#">Pietrain</a>
-                  <a href="#">Berkshire</a>
-                  <a href="#">Camborough</a>
+                  
+                  <a href="#">Pig Feed and Medicine</a>
+                  <a href="#">Veterinary Medicines</a>
+                  <a href="#">Equipment and Farm Supplies</a>
+                  <a href="#">Veterinary Pharmacies and Shops</a>
+                  <a href="#">Nutritional Supplements</a>
+                  <a href="#">Pig Health Monitoring Devices</a>
                 </div>
               </div>
             )}
@@ -120,26 +99,28 @@ const Navbar = () => {
 
           <div 
             className="nav-item" 
-            onMouseEnter={() => handleMouseEnter('community')}
+            onMouseEnter={() => handleMouseEnter('about')}
             onMouseLeave={handleMouseLeave}
           >
             <a href="#" className="nav-link">
-              Community & Education <span className="arrow">▾</span>
+              Elements <span className="arrow">▾</span>
             </a>
-            {activeDropdown === 'community' && (
+            {activeDropdown === 'about' && (
               <div className="dropdown-menu">
                 <div className="dropdown-section">
-                  <h3>Pig Breeds</h3>
-                  <a href="#">Large White</a>
-                  <a href="#">Landrace</a>
-                  <a href="#">Duroc</a>
-                  <a href="#">Pietrain</a>
-                  <a href="#">Berkshire</a>
-                  <a href="#">Camborough</a>
+                 
+                  <a href="#">About US</a>
+                  <a href="#">Contact Us</a>
+                  <a href="#">FAQ</a>
+                  <a href="#">Testimonials</a>
+                  <a href="#">News and Updates</a>
+                  
                 </div>
               </div>
             )}
           </div>
+
+          
 
           <a href="#" className="nav-link">Government policies</a>
         </div>
