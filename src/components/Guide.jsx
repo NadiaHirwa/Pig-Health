@@ -11,7 +11,7 @@ const Guide = () => {
     "Keep detailed records of growth, health, and breeding activities."
   ];
 
-  return (
+  return ( 
     <div className="guide-container"> 
       <div className="guide-content">
         <div className="guide-image">
@@ -35,7 +35,7 @@ const Guide = () => {
             ))}
           </div>
           
-          <button className="read-more">Read More</button>
+          {/* <button className="read-more">Read More</button> */}
         </div>
       </div>
     </div>

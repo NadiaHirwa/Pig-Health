@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import heroPig from '../assets/hero-pig.jpg';
 import heroPig1 from '../assets/hero-pig1.jpg';
@@ -8,6 +9,7 @@ import './Hero.css';
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const images = [heroPig, heroPig1, heroPig2];
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,7 +37,7 @@ const Hero = () => {
             Start your journey to modern pig farming with the latest technologies. 
             Discover smart solutions for your farm that improve productivity and animal welfare.
           </p>
-          <button className="get-started">Get Started</button>
+          <button className="get-started" onClick={() => navigate('/signup')}>Get Started</button>
         </div>
 
         <div className="hero-links">

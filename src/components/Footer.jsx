@@ -1,8 +1,11 @@
 import React from 'react';
 import { FaTwitter, FaFacebookF, FaPinterestP, FaInstagram, FaArrowRight } from 'react-icons/fa';
 import './Footer.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -13,8 +16,7 @@ const Footer = () => {
             <span>Rwanda</span>
           </div>
           <p className="footer-description">
-            There are many variations of passages of lorem ipsum available, but the 
-            majority suffered.
+          A tech-driven platform improving pig farming in Rwanda through innovation, education, and supportive policies.
           </p>
           <div className="social-links">
             <a href="#" aria-label="Twitter"><FaTwitter /></a>
@@ -28,12 +30,44 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Explore</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Pig Farming</a></li>
-            <li><a href="#">Veterinary Services</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li>
+              <Link to="/" onClick={e => {
+                if (window.location.pathname === '/') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }, 300);
+                }
+              }}>
+                Home
+              </Link>
+            </li>
+            <li><Link to="/about" onClick={e => {
+              e.preventDefault();
+              if (window.location.pathname !== '/about') {
+                navigate('/about');
+                setTimeout(() => {
+                  const aboutSection = document.querySelector('.about-us-section');
+                  if (aboutSection) aboutSection.scrollIntoView({ behavior: 'smooth' });
+                }, 300);
+              } else {
+                const aboutSection = document.querySelector('.about-us-section');
+                if (aboutSection) aboutSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}>About Us</Link></li>
+            <li><a href="#contact-us" onClick={e => {
+              e.preventDefault();
+              if (window.location.pathname !== '/about') {
+                navigate('/about');
+                setTimeout(() => {
+                  if (window.scrollToContactUs) window.scrollToContactUs();
+                }, 300);
+              } else {
+                if (window.scrollToContactUs) window.scrollToContactUs();
+              }
+            }}>Contact Us</a></li>
+            {/* <li><a href="#">Community</a></li> */}
           </ul>
         </div>
 

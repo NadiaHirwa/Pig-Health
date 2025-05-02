@@ -54,6 +54,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 2rem;
+  text-align: left;
 }
 
 .guide-item {

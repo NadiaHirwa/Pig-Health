@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { FaSearch, FaUser } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleMouseEnter = (menu) => {
     setActiveDropdown(menu);
@@ -12,6 +14,18 @@ const Navbar = () => {
 
   const handleMouseLeave = () => {
     setActiveDropdown(null);
+  };
+
+  const handleContactUsClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== '/about') {
+      navigate('/about');
+      setTimeout(() => {
+        if (window.scrollToContactUs) window.scrollToContactUs();
+      }, 300);
+    } else {
+      if (window.scrollToContactUs) window.scrollToContactUs();
+    }
   };
 
   return (
@@ -83,12 +97,11 @@ const Navbar = () => {
             {activeDropdown === 'shop' && (
               <div className="dropdown-menu">
                 <div className="dropdown-section">
-                  <a href="#">Pig Feed and Medicine</a>
-                  <a href="#">Veterinary Medicines</a>
-                  <a href="#">Equipment and Farm Supplies</a>
-                  <a href="#">Veterinary Pharmacies and Shops</a>
-                  <a href="#">Nutritional Supplements</a>
-                  <a href="#">Pig Health Monitoring Devices</a>
+                  <Link to="/medicine-supplies/pig-feed-and-medicine">Pig Feed and Medicine</Link>
+                  <Link to="/medicine-supplies/veterinary-medicine">Veterinary Medicines</Link>
+                  <Link to="/medicine-supplies/equipment-and-farm-supplies">Equipment and Farm Supplies</Link>
+                  <Link to="/medicine-supplies/nutritional-supplements">Nutritional Supplements</Link>
+                  <Link to="/medicine-supplies/pig-health-and-devices">Pig Health Monitoring Devices</Link>
                 </div>
               </div>
             )}
@@ -105,17 +118,27 @@ const Navbar = () => {
             {activeDropdown === 'about' && (
               <div className="dropdown-menu">
                 <div className="dropdown-section">
-                  <a href="#">About US</a>
-                  <a href="#">Contact Us</a>
-                  <a href="#">FAQ</a>
-                  <a href="#">Testimonials</a>
-                  <a href="#">News and Updates</a>
+                  <Link to="/about">About Us</Link>
+                  <a href="#contact-us" onClick={handleContactUsClick}>Contact Us</a>
+                  <a href="#faq-section" onClick={e => {
+                    e.preventDefault();
+                    if (location.pathname !== '/about') {
+                      navigate('/about');
+                      setTimeout(() => {
+                        if (window.scrollToFAQ) window.scrollToFAQ();
+                      }, 300);
+                    } else {
+                      if (window.scrollToFAQ) window.scrollToFAQ();
+                    }
+                  }}>FAQ</a>
+                  {/* <a href="#">Testimonials</a> */}
+                  {/* <a href="#">News and Updates</a> */}
                 </div>
               </div>
             )}
           </div>
 
-          <a href="#" className="nav-link">Government policies</a>
+          <Link to="/government-policies" className="nav-link">Government policies</Link>
         </div>
 
         <div className="user-section">

@@ -28,8 +28,36 @@ import HealthMonitoring from './pages/farming-techniques/HealthMonitoring'
 import Vaccination from './pages/farming-techniques/Vaccination'
 import VeterinaryServices from './pages/farming-techniques/VeterinaryServices'
 import Biosecurity from './pages/farming-techniques/Biosecurity'
+import PigFeedAndMedicine from './pages/medicine-supplies/PigFeedAndMedicine'
+import VeterinaryMedicine from './pages/medicine-supplies/VeterinaryMedicine'
+import EquipmentAndFarmSupplies from './pages/medicine-supplies/EquipmentAndFarmSupplies'
+import NutritionalSupplements from './pages/medicine-supplies/NutritionalSupplements'
+import PigHealthAndDevices from './pages/medicine-supplies/PigHealthAndDevices'
+import AboutAndContact from './components/AboutUs'
+import GovernmentPolicies from './pages/GovernmentPolicies'
 
 function App() {
+  const contactRef = React.useRef(null);
+  const faqRef = React.useRef(null);
+
+  // Provide a way for Navbar to trigger scroll to contact
+  React.useEffect(() => {
+    window.scrollToContactUs = () => {
+      if (contactRef.current) {
+        contactRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    window.scrollToFAQ = () => {
+      if (faqRef.current) {
+        faqRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    return () => { 
+      delete window.scrollToContactUs;
+      delete window.scrollToFAQ;
+    };
+  }, []);
+
   return (
     <Router>
       <div className="app">
@@ -64,6 +92,13 @@ function App() {
           <Route path="/farming-techniques/vaccination" element={<Vaccination />} />
           <Route path="/farming-techniques/veterinary-services" element={<VeterinaryServices />} />
           <Route path="/farming-techniques/biosecurity" element={<Biosecurity />} />
+          <Route path="/medicine-supplies/pig-feed-and-medicine" element={<PigFeedAndMedicine />} />
+          <Route path="/medicine-supplies/veterinary-medicine" element={<VeterinaryMedicine />} />
+          <Route path="/medicine-supplies/equipment-and-farm-supplies" element={<EquipmentAndFarmSupplies />} />
+          <Route path="/medicine-supplies/nutritional-supplements" element={<NutritionalSupplements />} />
+          <Route path="/medicine-supplies/pig-health-and-devices" element={<PigHealthAndDevices />} />
+          <Route path="/about" element={<AboutAndContact contactRef={contactRef} faqRef={faqRef} />} />
+          <Route path="/government-policies" element={<GovernmentPolicies />} />
         </Routes>
         <Footer />
       </div>

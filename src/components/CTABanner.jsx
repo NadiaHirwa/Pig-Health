@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CTABanner.css';
 
 const CTABanner = () => {
+  const navigate = useNavigate();
   return (
     <div className="cta-banner">
       <div className="cta-content">
@@ -11,7 +13,7 @@ const CTABanner = () => {
         <div className="cta-text">
           <span className="cta-label">Join the Pig Farming Network</span>
           <h2>Be part of Rwanda's fastest-growing pig farming community.</h2>
-          <button className="sign-up-btn">Sign Up Now</button>
+          <button className="sign-up-btn" onClick={() => navigate('/signup')}>Sign Up Now</button>
         </div>
       </div>
     </div>
