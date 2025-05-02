@@ -32,17 +32,6 @@ const Duroc = () => {
           </p>
         </section>
 
-        <section className="breed-section">
-          <h2>Characteristics</h2>
-          <ul>
-            <li>Red to golden-red color</li>
-            <li>Medium-sized drooping ears</li>
-            <li>Excellent meat quality</li>
-            <li>Fast growth rate</li>
-            <li>Good feed conversion efficiency</li>
-          </ul>
-        </section>
-
         <section className="breed-sectionp">
           <h2>Performance</h2>
           <div className="performance-metrics">
@@ -62,46 +51,72 @@ const Duroc = () => {
           </div>
         </section>
 
-        <section className="breed-section">
-          <h2>Farming Benefits</h2>
-          <ul>
-            <li>Excellent meat quality with marbling</li>
-            <li>Good feed conversion efficiency</li>
-            <li>Hardy and adaptable to various climates</li>
-            <li>Fast-growing and muscular</li>
-            <li>Calm and manageable temperament</li>
-          </ul>
-        </section>
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Characteristics</h2>
+            <ul>
+              <li>Red to golden-red color</li>
+              <li>Medium-sized drooping ears</li>
+              <li>Excellent meat quality</li>
+              <li>Fast growth rate</li>
+              <li>Good feed conversion efficiency</li>
+            </ul>
+          </section>
 
-        <section className="breed-section">
-          <h2>Management Requirements</h2>
-          <ul>
-            <li>Requires high-quality feed for optimal growth</li>
-            <li>Needs proper housing with good ventilation</li>
-            <li>Regular exercise area needed</li>
-            <li>Regular health monitoring recommended</li>
-          </ul>
-        </section>
+          <section className="breed-section">
+            <h2>Farming Benefits</h2>
+            <ul>
+              <li>Excellent meat quality with marbling</li>
+              <li>Good feed conversion efficiency</li>
+              <li>Hardy and adaptable to various climates</li>
+              <li>Fast-growing and muscular</li>
+              <li>Calm and manageable temperament</li>
+            </ul>
+          </section>
+        </div>
 
-        <section className="breed-section">
-          <h2>Advantages</h2>
-          <ul>
-            <li>Excellent meat quality and marbling</li>
-            <li>Fast growth rate</li>
-            <li>Good feed conversion efficiency</li>
-            <li>Hardy and adaptable</li>
-            <li>Good temperament</li>
-          </ul>
-        </section>
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Advantages</h2>
+            <ul>
+              <li>Excellent meat quality and marbling</li>
+              <li>Fast growth rate</li>
+              <li>Good feed conversion efficiency</li>
+              <li>Hardy and adaptable</li>
+              <li>Good temperament</li>
+            </ul>
+          </section>
 
-        <section className="breed-section">
-          <h2>Challenges</h2>
-          <ul>
-            <li>Requires high-quality feed</li>
-            <li>Needs proper management for optimal performance</li>
-            <li>Can be aggressive if not properly managed</li>
-          </ul>
-        </section>
+          <section className="breed-section">
+            <h2>Disadvantages</h2>
+            <ul>
+              <li>Can be aggressive, especially males</li>
+              <li>May not have strong maternal traits</li>
+              <li>Less adaptable to extremely hot or cold climates</li>
+            </ul>
+          </section>
+        </div>
+
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Management Requirements</h2>
+            <ul>
+              <li>Requires high-quality feed for optimal growth</li>
+              <li>Needs proper housing with good ventilation</li>
+              <li>Regular exercise area needed</li>
+              <li>Regular health monitoring recommended</li>
+            </ul>
+          </section>
+
+          <section className="breed-section">
+            <h2>Challenges</h2>
+            <ul>
+              <li>Requires high-quality feed</li>
+              <li>Needs proper management for optimal performance</li>
+              <li>Can be aggressive if not properly managed</li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
   );

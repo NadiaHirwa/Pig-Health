@@ -32,17 +32,6 @@ const Camborough = () => {
           </p>
         </section>
 
-        <section className="breed-section">
-          <h2>Characteristics</h2>
-          <ul>
-            <li>White color with good body conformation</li>
-            <li>Excellent mothering abilities</li>
-            <li>High fertility rates</li>
-            <li>Good feed conversion efficiency</li>
-            <li>Adaptable to various climates</li>
-          </ul>
-        </section>
-
         <section className="breed-sectionp">
           <h2>Performance</h2>
           <div className="performance-metrics">
@@ -62,47 +51,73 @@ const Camborough = () => {
           </div>
         </section>
 
-        <section className="breed-section">
-          <h2>Farming Benefits</h2>
-          <ul>
-            <li>High reproductive efficiency (large litters)</li>
-            <li>Low piglet mortality</li>
-            <li>Fast growth in offspring</li>
-            <li>Efficient feed conversion</li>
-            <li>Good maternal traits and easy farrowing</li>
-            <li>Performs well in structured breeding systems</li>
-          </ul>
-        </section>
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Characteristics</h2>
+            <ul>
+              <li>White color with good body conformation</li>
+              <li>Excellent mothering abilities</li>
+              <li>High fertility rates</li>
+              <li>Good feed conversion efficiency</li>
+              <li>Adaptable to various climates</li>
+            </ul>
+          </section>
 
-        <section className="breed-section">
-          <h2>Management Requirements</h2>
-          <ul>
-            <li>Requires balanced nutrition for optimal performance</li>
-            <li>Needs proper housing with good ventilation</li>
-            <li>Regular health monitoring essential</li>
-            <li>Proper biosecurity measures needed</li>
-          </ul>
-        </section>
+          <section className="breed-section">
+            <h2>Farming Benefits</h2>
+            <ul>
+              <li>High reproductive efficiency (large litters)</li>
+              <li>Low piglet mortality</li>
+              <li>Fast growth in offspring</li>
+              <li>Efficient feed conversion</li>
+              <li>Good maternal traits and easy farrowing</li>
+              <li>Performs well in structured breeding systems</li>
+            </ul>
+          </section>
+        </div>
 
-        <section className="breed-section">
-          <h2>Advantages</h2>
-          <ul>
-            <li>Excellent reproductive performance</li>
-            <li>Good growth rate</li>
-            <li>High feed conversion efficiency</li>
-            <li>Good mothering abilities</li>
-            <li>Adaptable to various farming conditions</li>
-          </ul>
-        </section>
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Advantages</h2>
+            <ul>
+              <li>Excellent reproductive performance</li>
+              <li>Good growth rate</li>
+              <li>High feed conversion efficiency</li>
+              <li>Good mothering abilities</li>
+              <li>Adaptable to various farming conditions</li>
+            </ul>
+          </section>
 
-        <section className="breed-section">
-          <h2>Challenges</h2>
-          <ul>
-            <li>Requires good management practices</li>
-            <li>Needs proper nutrition for optimal performance</li>
-            <li>Regular health monitoring required</li>
-          </ul>
-        </section>
+          <section className="breed-section">
+            <h2>Disadvantages</h2>
+            <ul>
+              <li>Higher cost due to hybrid breeding</li>
+              <li>May require specific management systems</li>
+              <li>Not commonly used for backyard farming</li>
+            </ul>
+          </section>
+        </div>
+
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Management Requirements</h2>
+            <ul>
+              <li>Requires balanced nutrition for optimal performance</li>
+              <li>Needs proper housing with good ventilation</li>
+              <li>Regular health monitoring essential</li>
+              <li>Proper biosecurity measures needed</li>
+            </ul>
+          </section>
+
+          <section className="breed-section">
+            <h2>Challenges</h2>
+            <ul>
+              <li>Requires good management practices</li>
+              <li>Needs proper nutrition for optimal performance</li>
+              <li>Regular health monitoring required</li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
   );

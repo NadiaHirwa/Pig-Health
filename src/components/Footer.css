@@ -177,4 +177,8 @@
   .footer-brand {
     max-width: 100%;
   }
+}
+
+.footer-container {
+  width: 100%;
 } 

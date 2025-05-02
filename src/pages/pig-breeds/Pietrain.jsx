@@ -32,17 +32,6 @@ const Pietrain = () => {
           </p>
         </section>
 
-        <section className="breed-section">
-          <h2>Characteristics</h2>
-          <ul>
-            <li>Black and white spotted pattern</li>
-            <li>Erect ears</li>
-            <li>High lean meat percentage</li>
-            <li>Excellent meat quality</li>
-            <li>Muscular build</li>
-          </ul>
-        </section>
-
         <section className="breed-sectionp">
           <h2>Performance</h2>
           <div className="performance-metrics">
@@ -62,47 +51,73 @@ const Pietrain = () => {
           </div>
         </section>
 
-        <section className="breed-section">
-          <h2>Farming Benefits</h2>
-          <ul>
-            <li>High lean meat yield</li>
-            <li>Great for improving carcass traits in crossbreeds</li>
-            <li>Strong muscles, especially in ham and loin</li>
-            <li>Efficient growth with proper feeding</li>
-            <li>Low fat content – ideal for lean pork markets</li>
-          </ul>
-        </section>
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Characteristics</h2>
+            <ul>
+              <li>Black and white spotted pattern</li>
+              <li>Erect ears</li>
+              <li>High lean meat percentage</li>
+              <li>Excellent meat quality</li>
+              <li>Muscular build</li>
+            </ul>
+          </section>
 
-        <section className="breed-section">
-          <h2>Management Requirements</h2>
-          <ul>
-            <li>Requires high-quality feed with balanced protein</li>
-            <li>Needs proper housing with good ventilation</li>
-            <li>Regular exercise area needed</li>
-            <li>Careful health monitoring required</li>
-          </ul>
-        </section>
+          <section className="breed-section">
+            <h2>Farming Benefits</h2>
+            <ul>
+              <li>High lean meat yield</li>
+              <li>Great for improving carcass traits in crossbreeds</li>
+              <li>Strong muscles, especially in ham and loin</li>
+              <li>Efficient growth with proper feeding</li>
+              <li>Low fat content – ideal for lean pork markets</li>
+            </ul>
+          </section>
+        </div>
 
-        <section className="breed-section">
-          <h2>Advantages</h2>
-          <ul>
-            <li>High lean meat percentage</li>
-            <li>Excellent meat quality</li>
-            <li>Good feed conversion efficiency</li>
-            <li>Well-muscled carcass</li>
-            <li>Good for crossbreeding programs</li>
-          </ul>
-        </section>
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Advantages</h2>
+            <ul>
+              <li>High lean meat percentage</li>
+              <li>Excellent meat quality</li>
+              <li>Good feed conversion efficiency</li>
+              <li>Well-muscled carcass</li>
+              <li>Good for crossbreeding programs</li>
+            </ul>
+          </section>
 
-        <section className="breed-section">
-          <h2>Challenges</h2>
-          <ul>
-            <li>Stress susceptibility</li>
-            <li>Requires careful management</li>
-            <li>Lower fertility compared to other breeds</li>
-            <li>Needs high-quality feed</li>
-          </ul>
-        </section>
+          <section className="breed-section">
+            <h2>Disadvantages</h2>
+            <ul>
+              <li>Prone to Porcine Stress Syndrome</li>
+              <li>Poor meat flavor despite high leanness</li>
+              <li>Not ideal for natural or pasture-based systems</li>
+            </ul>
+          </section>
+        </div>
+
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Management Requirements</h2>
+            <ul>
+              <li>Requires high-quality feed with balanced protein</li>
+              <li>Needs proper housing with good ventilation</li>
+              <li>Regular exercise area needed</li>
+              <li>Careful health monitoring required</li>
+            </ul>
+          </section>
+
+          <section className="breed-section">
+            <h2>Challenges</h2>
+            <ul>
+              <li>Stress susceptibility</li>
+              <li>Requires careful management</li>
+              <li>Lower fertility compared to other breeds</li>
+              <li>Needs high-quality feed</li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
   );

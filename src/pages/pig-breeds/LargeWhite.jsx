@@ -34,17 +34,6 @@ const LargeWhite = () => {
         various climates and good mothering abilities make it ideal for both small and large-scale farms.</p>
         </section>
 
-        <section className="breed-section">
-          <h2>Characteristics</h2>
-          <ul>
-            <li>Large, white-colored body with erect ears</li>
-            <li>Excellent mothering abilities</li>
-            <li>High feed conversion efficiency</li>
-            <li>Good growth rate and lean meat production</li>
-            <li>Adaptable to various climates</li>
-          </ul>
-        </section>
-
         <section className="breed-sectionp">
           <h2>Performance</h2>
           <div className="performance-metrics">
@@ -64,46 +53,72 @@ const LargeWhite = () => {
           </div>
         </section>
 
-        <section className="breed-section">
-          <h2>Farming Benefits</h2>
-          <ul>
-          <li>High feed-to-meat conversion efficiency</li>
-            <li>Adaptable to Rwandan farming conditions</li>
-            <li>Preferred for meat production due to lean carcass</li>
-            <li>Performs well in crossbreeding programs</li>
-            <li>Easy to manage with good reproductive traits</li>
-          </ul>
-        </section>
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Characteristics</h2>
+            <ul>
+              <li>Large, white-colored body with erect ears</li>
+              <li>Excellent mothering abilities</li>
+              <li>High feed conversion efficiency</li>
+              <li>Good growth rate and lean meat production</li>
+              <li>Adaptable to various climates</li>
+            </ul>
+          </section>
 
-        <section className="breed-section">
-          <h2>Management Requirements</h2>
-          <ul>
-            <li>Requires good quality feed for optimal growth</li>
-            <li>Needs proper housing with good ventilation</li>
-            <li>Regular health monitoring recommended</li>
-            <li>Regular exercise area needed</li>
-          </ul>
-        </section>
+          <section className="breed-section">
+            <h2>Farming Benefits</h2>
+            <ul>
+              <li>High feed-to-meat conversion efficiency</li>
+              <li>Adaptable to Rwandan farming conditions</li>
+              <li>Preferred for meat production due to lean carcass</li>
+              <li>Performs well in crossbreeding programs</li>
+              <li>Easy to manage with good reproductive traits</li>
+            </ul>
+          </section>
+        </div>
 
-        <section className="breed-section">
-          <h2>Advantages</h2>
-          <ul>
-            <li>Excellent meat quality</li>
-            <li>Good mothering abilities</li>
-            <li>High feed conversion efficiency</li>
-            <li>Adaptable to various climates</li>
-            <li>Good temperament</li>
-          </ul>
-        </section>
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Advantages</h2>
+            <ul>
+              <li>Excellent meat quality</li>
+              <li>Good mothering abilities</li>
+              <li>High feed conversion efficiency</li>
+              <li>Adaptable to various climates</li>
+              <li>Good temperament</li>
+            </ul>
+          </section>
 
-        <section className="breed-section">
-          <h2>Challenges</h2>
-          <ul>
-            <li>Susceptible to sunburn (requires shade)</li>
-            <li>Needs good quality feed</li>
-            <li>Requires proper management for optimal performance</li>
-          </ul>
-        </section>
+          <section className="breed-section">
+            <h2>Disadvantages</h2>
+            <ul>
+              <li>Prone to sunburn due to white skin</li>
+              <li>May not perform well in very hot climates</li>
+              <li>Requires proper housing and feeding management</li>
+            </ul>
+          </section>
+        </div>
+
+        <div className="breed-section-row">
+          <section className="breed-section">
+            <h2>Management Requirements</h2>
+            <ul>
+              <li>Requires good quality feed for optimal growth</li>
+              <li>Needs proper housing with good ventilation</li>
+              <li>Regular health monitoring recommended</li>
+              <li>Regular exercise area needed</li>
+            </ul>
+          </section>
+
+          <section className="breed-section">
+            <h2>Challenges</h2>
+            <ul>
+              <li>Susceptible to sunburn (requires shade)</li>
+              <li>Needs good quality feed</li>
+              <li>Requires proper management for optimal performance</li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
   );
