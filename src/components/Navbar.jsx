@@ -54,19 +54,19 @@ const Navbar = () => {
                 </div>
                 <div className="dropdown-section">
                   <h3>Farming Techniques</h3>
-                  <a href="#">Housing</a>
-                  <a href="#">Feeding</a>
-                  <a href="#">Reproduction Management</a>
-                  <a href="#">Waste Management</a>
-                  <a href="#">Free-Range Pig Farming</a>
+                  <Link to="/farming-techniques/housing">Housing</Link>
+                  <Link to="/farming-techniques/feeding">Feeding</Link>
+                  <Link to="/farming-techniques/reproduction-management">Reproduction Management</Link>
+                  <Link to="/farming-techniques/waste-management">Waste Management</Link>
+                  <Link to="/farming-techniques/free-range-pig-farming">Free-Range Pig Farming</Link>
                 </div>
                 <div className="dropdown-section">
                   <h3>Pig Health and Diseases</h3>
-                  <a href="#">Common Diseases</a>
-                  <a href="#">Health Monitoring</a>
-                  <a href="#">Vaccination</a>
-                  <a href="#">Veterinary Services</a>
-                  <a href="#">Biosecurity</a>
+                  <Link to="/farming-techniques/common-diseases">Common Diseases</Link>
+                  <Link to="/farming-techniques/health-monitoring">Health Monitoring</Link>
+                  <Link to="/farming-techniques/vaccination">Vaccination</Link>
+                  <Link to="/farming-techniques/veterinary-services">Veterinary Services</Link>
+                  <Link to="/farming-techniques/biosecurity">Biosecurity</Link>
                 </div>
               </div>
             )}

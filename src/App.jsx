@@ -18,6 +18,16 @@ import Landrace from './pages/pig-breeds/Landrace'
 import Duroc from './pages/pig-breeds/Duroc'
 import Pietrain from './pages/pig-breeds/Pietrain'
 import Camborough from './pages/pig-breeds/Camborough'
+import Housing from './pages/farming-techniques/Housing'
+import Feeding from './pages/farming-techniques/Feeding'
+import ReproductionManagement from './pages/farming-techniques/ReproductionManagement'
+import WasteManagement from './pages/farming-techniques/WasteManagement'
+import FreeRangePigFarming from './pages/farming-techniques/FreeRangePigFarming'
+import CommonDiseases from './pages/farming-techniques/CommonDiseases'
+import HealthMonitoring from './pages/farming-techniques/HealthMonitoring'
+import Vaccination from './pages/farming-techniques/Vaccination'
+import VeterinaryServices from './pages/farming-techniques/VeterinaryServices'
+import Biosecurity from './pages/farming-techniques/Biosecurity'
 
 function App() {
   return (
@@ -44,6 +54,16 @@ function App() {
           <Route path="/pig-breeds/duroc" element={<Duroc />} />
           <Route path="/pig-breeds/pietrain" element={<Pietrain />} />
           <Route path="/pig-breeds/camborough" element={<Camborough />} />
+          <Route path="/farming-techniques/housing" element={<Housing />} />
+          <Route path="/farming-techniques/feeding" element={<Feeding />} />
+          <Route path="/farming-techniques/reproduction-management" element={<ReproductionManagement />} />
+          <Route path="/farming-techniques/waste-management" element={<WasteManagement />} />
+          <Route path="/farming-techniques/free-range-pig-farming" element={<FreeRangePigFarming />} />
+          <Route path="/farming-techniques/common-diseases" element={<CommonDiseases />} />
+          <Route path="/farming-techniques/health-monitoring" element={<HealthMonitoring />} />
+          <Route path="/farming-techniques/vaccination" element={<Vaccination />} />
+          <Route path="/farming-techniques/veterinary-services" element={<VeterinaryServices />} />
+          <Route path="/farming-techniques/biosecurity" element={<Biosecurity />} />
         </Routes>
         <Footer />
       </div>
