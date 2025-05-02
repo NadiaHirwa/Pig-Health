@@ -13,6 +13,11 @@ import LoginForm from './components/auth/LoginForm'
 import SignupForm from './components/auth/SignupForm'
 import ForgotPasswordForm from './components/auth/ForgotPasswordForm'
 import ChangePasswordForm from './components/auth/ChangePasswordForm'
+import LargeWhite from './pages/pig-breeds/LargeWhite'
+import Landrace from './pages/pig-breeds/Landrace'
+import Duroc from './pages/pig-breeds/Duroc'
+import Pietrain from './pages/pig-breeds/Pietrain'
+import Camborough from './pages/pig-breeds/Camborough'
 
 function App() {
   return (
@@ -34,6 +39,11 @@ function App() {
           <Route path="/signup" element={<SignupForm />} />
           <Route path="/forgot-password" element={<ForgotPasswordForm />} />
           <Route path="/change-password" element={<ChangePasswordForm />} />
+          <Route path="/pig-breeds/large-white" element={<LargeWhite />} />
+          <Route path="/pig-breeds/landrace" element={<Landrace />} />
+          <Route path="/pig-breeds/duroc" element={<Duroc />} />
+          <Route path="/pig-breeds/pietrain" element={<Pietrain />} />
+          <Route path="/pig-breeds/camborough" element={<Camborough />} />
         </Routes>
         <Footer />
       </div>

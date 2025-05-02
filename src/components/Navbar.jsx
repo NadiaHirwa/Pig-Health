@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaSearch, FaUser } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -17,10 +18,10 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Top Row: Logo and Search */}
       <div className="top-row">
-        <a href="/" className="brand">
+        <Link to="/" className="brand">
           <span className="brand-name">PigHealth</span>
           <span className="brand-subtitle">Rwanda</span>
-        </a>
+        </Link>
 
         <div className="search-container">
           <input type="text" placeholder="Search..." className="search-input" />
@@ -31,10 +32,8 @@ const Navbar = () => {
       {/* Bottom Row: Navigation and User */}
       <div className="bottom-row">
         <div className="nav-menu">
-          <a href="/" className="nav-link active">Home</a>
+          <Link to="/" className="nav-link active">Home</Link>
           
-          
-
           <div 
             className="nav-item" 
             onMouseEnter={() => handleMouseEnter('farming')}
@@ -47,12 +46,11 @@ const Navbar = () => {
               <div className="dropdown-menu">
                 <div className="dropdown-section">
                   <h3>Pig Breeds</h3>
-                  <a href="#">Large White</a>
-                  <a href="#">Landrace</a>
-                  <a href="#">Duroc</a>
-                  <a href="#">Pietrain</a>
-                  <a href="#">Berkshire</a>
-                  <a href="#">Camborough</a>
+                  <Link to="/pig-breeds/large-white">Large White</Link>
+                  <Link to="/pig-breeds/landrace">Landrace</Link>
+                  <Link to="/pig-breeds/duroc">Duroc</Link>
+                  <Link to="/pig-breeds/pietrain">Pietrain</Link>
+                  <Link to="/pig-breeds/camborough">Camborough</Link>
                 </div>
                 <div className="dropdown-section">
                   <h3>Farming Techniques</h3>
@@ -85,7 +83,6 @@ const Navbar = () => {
             {activeDropdown === 'shop' && (
               <div className="dropdown-menu">
                 <div className="dropdown-section">
-                  
                   <a href="#">Pig Feed and Medicine</a>
                   <a href="#">Veterinary Medicines</a>
                   <a href="#">Equipment and Farm Supplies</a>
@@ -108,13 +105,11 @@ const Navbar = () => {
             {activeDropdown === 'about' && (
               <div className="dropdown-menu">
                 <div className="dropdown-section">
-                 
                   <a href="#">About US</a>
                   <a href="#">Contact Us</a>
                   <a href="#">FAQ</a>
                   <a href="#">Testimonials</a>
                   <a href="#">News and Updates</a>
-                  
                 </div>
               </div>
             )}
@@ -124,7 +119,7 @@ const Navbar = () => {
         </div>
 
         <div className="user-section">
-          <a href="/signup" className="nav-link">Sign In/Sign Up</a>
+          <Link to="/signup" className="nav-link">Sign In/Sign Up</Link>
         </div>
       </div>
     </nav>
