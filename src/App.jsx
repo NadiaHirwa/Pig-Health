@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -35,6 +35,21 @@ import NutritionalSupplements from './pages/medicine-supplies/NutritionalSupplem
 import PigHealthAndDevices from './pages/medicine-supplies/PigHealthAndDevices'
 import AboutAndContact from './components/AboutUs'
 import GovernmentPolicies from './pages/GovernmentPolicies'
+import AdminDashboard from './pages/AdminDashboard'
+
+// Create a wrapper component to handle layout
+const Layout = ({ children }) => {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith('/admin');
+
+  return (
+    <div className="app">
+      {!isAdminRoute && <Navbar />}
+      {children}
+      {!isAdminRoute && <Footer />}
+    </div>
+  );
+};
 
 function App() {
   const contactRef = React.useRef(null);
@@ -60,8 +75,7 @@ function App() {
 
   return (
     <Router>
-      <div className="app">
-        <Navbar />
+      <Layout>
         <Routes>
           <Route path="/" element={
             <>
@@ -99,9 +113,9 @@ function App() {
           <Route path="/medicine-supplies/pig-health-and-devices" element={<PigHealthAndDevices />} />
           <Route path="/about" element={<AboutAndContact contactRef={contactRef} faqRef={faqRef} />} />
           <Route path="/government-policies" element={<GovernmentPolicies />} />
+          <Route path="/admin/*" element={<AdminDashboard />} />
         </Routes>
-        <Footer />
-      </div>
+      </Layout>
     </Router>
   )
 }
