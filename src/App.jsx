@@ -36,17 +36,19 @@ import PigHealthAndDevices from './pages/medicine-supplies/PigHealthAndDevices'
 import AboutAndContact from './components/AboutUs'
 import GovernmentPolicies from './pages/GovernmentPolicies'
 import AdminDashboard from './pages/AdminDashboard'
+import VetDashboard from './pages/VetDashboard'
 
 // Create a wrapper component to handle layout
 const Layout = ({ children }) => {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
+  const isVetRoute = location.pathname.startsWith('/vet');
 
   return (
     <div className="app">
-      {!isAdminRoute && <Navbar />}
+      {!isAdminRoute && !isVetRoute && <Navbar />}
       {children}
-      {!isAdminRoute && <Footer />}
+      {!isAdminRoute && !isVetRoute && <Footer />}
     </div>
   );
 };
@@ -114,6 +116,7 @@ function App() {
           <Route path="/about" element={<AboutAndContact contactRef={contactRef} faqRef={faqRef} />} />
           <Route path="/government-policies" element={<GovernmentPolicies />} />
           <Route path="/admin/*" element={<AdminDashboard />} />
+          <Route path="/vet/*" element={<VetDashboard />} />
         </Routes>
       </Layout>
     </Router>

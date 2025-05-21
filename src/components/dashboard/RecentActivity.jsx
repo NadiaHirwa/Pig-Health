@@ -1,70 +1,111 @@
 import React from 'react';
+import { FaCalendarAlt, FaSyringe, FaFileMedical, FaComments } from 'react-icons/fa';
 
-const activities = [
-  { label: 'Farmer registered', value: 4238 },
-  { label: 'Message from Farmer', value: 1005 },
-  { label: 'Vet approved', value: 914 },
-  { label: 'Pig alert', value: 281 },
-];
+const RecentActivity = () => {
+  const activities = [
+    {
+      icon: <FaCalendarAlt />,
+      title: 'New Appointment Request',
+      description: 'Farmer John requested a health check for Pig #123',
+      time: '2 hours ago',
+      type: 'appointment'
+    },
+    {
+      icon: <FaSyringe />,
+      title: 'Vaccination Due',
+      description: 'Pig #456 is due for swine flu vaccination',
+      time: '3 hours ago',
+      type: 'vaccination'
+    },
+    {
+      icon: <FaFileMedical />,
+      title: 'Health Record Updated',
+      description: 'Updated treatment plan for Pig #789',
+      time: '5 hours ago',
+      type: 'health'
+    },
+    {
+      icon: <FaComments />,
+      title: 'New Message',
+      description: 'Farmer Sarah sent a message about Pig #234',
+      time: '6 hours ago',
+      type: 'message'
+    }
+  ];
 
-const RecentActivity = () => (
-  <div style={{ 
-    background: '#ffffff', 
-    borderRadius: '12px', 
-    padding: '24px',
-    boxShadow: '0 1px 4px rgba(0,0,0,0.03)',
-    border: '1px solid #e5e7eb',
-    minHeight: '300px'
-  }}>
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'space-between', 
-      alignItems: 'center', 
-      marginBottom: '20px',
-      borderBottom: '1px solid #e5e7eb',
-      paddingBottom: '10px'
+  return (
+    <div style={{
+      background: '#ffffff',
+      borderRadius: '12px',
+      padding: '24px',
+      boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
     }}>
-      <div style={{ 
-        fontWeight: '600',
+      <h2 style={{
         fontSize: '18px',
+        fontWeight: '600',
+        marginBottom: '20px',
         color: '#1a1a1a'
-      }}>Recent Activity</div>
-      <a href="#" style={{ 
-        color: '#4f8cff', 
-        fontSize: '14px', 
-        textDecoration: 'none' 
-      }}>View details</a>
+      }}>
+        Recent Activity
+      </h2>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        {activities.map((activity, index) => (
+          <div
+            key={index}
+            style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: '12px',
+              padding: '12px',
+              borderRadius: '8px',
+              background: '#f9fafb',
+              transition: 'all 0.2s',
+              cursor: 'pointer',
+              ':hover': {
+                background: '#f3f4f6'
+              }
+            }}
+          >
+            <div style={{
+              width: '32px',
+              height: '32px',
+              borderRadius: '8px',
+              background: '#e5e7eb',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#4b5563'
+            }}>
+              {activity.icon}
+            </div>
+            <div style={{ flex: 1 }}>
+              <div style={{
+                fontSize: '14px',
+                fontWeight: '600',
+                color: '#1a1a1a',
+                marginBottom: '4px'
+              }}>
+                {activity.title}
+              </div>
+              <div style={{
+                fontSize: '13px',
+                color: '#6b7280',
+                marginBottom: '4px'
+              }}>
+                {activity.description}
+              </div>
+              <div style={{
+                fontSize: '12px',
+                color: '#9ca3af'
+              }}>
+                {activity.time}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-    <div style={{ 
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '12px'
-    }}>
-      {activities.map((item, idx) => (
-        <div 
-          key={item.label} 
-          style={{ 
-            display: 'flex', 
-            justifyContent: 'space-between', 
-            padding: '12px',
-            backgroundColor: '#f8f9fa',
-            borderRadius: '8px',
-            border: '1px solid #e5e7eb'
-          }}
-        >
-          <span style={{ 
-            color: '#1a1a1a',
-            fontSize: '16px'
-          }}>{item.label}</span>
-          <span style={{ 
-            fontWeight: '600',
-            color: '#4f8cff',
-            fontSize: '16px'
-          }}>{item.value}</span>
-        </div>
-      ))}
-    </div>
-  </div>
-);
+  );
+};
 
 export default RecentActivity; 
